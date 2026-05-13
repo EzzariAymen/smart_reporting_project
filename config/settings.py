@@ -40,7 +40,11 @@ INSTALLED_APPS = [
     'tailwind',
     'theme',
     'analyzer',
+    'users',
+    'reports',
 ]
+
+AUTH_USER_MODEL = 'users.User'
 
 TAILWIND_APP_NAME = "theme"
 
@@ -65,7 +69,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
